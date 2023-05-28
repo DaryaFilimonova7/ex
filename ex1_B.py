@@ -17,7 +17,7 @@ print(max_idx)
 
 
 
-
+# runtime error оба варианта
 
 
 
