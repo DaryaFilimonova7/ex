@@ -6,7 +6,7 @@ def find_max() -> int:
     for i in a[1:len(a)]:
         max_m = max(a)
         if max_m == a[i] and i != 0 and i != len(a):
-            return max_m
+            return i+1
        
 
 
