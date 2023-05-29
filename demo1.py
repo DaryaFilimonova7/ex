@@ -1,11 +1,15 @@
 n = int(input())
 
-word = input()
+word = [str(x) for x in input()]
 
-def generator(word: str, tail:str) -> str:
-    if word == "":
-        print(tail)
-    for i in range(len(word)):
-        generator(word[:i] + word[i+1:], tail + word[i])
+def search(word):
+    i = 0
+    while i < len(word):
+        if i+1 < len(word):
+            if word[i] > word[i + 1]:
+                word = word[i+1:]
+        i += 1
+    return(word)
 
-print(generator(word, ""))
+ans = ''.join(search(word))
+print(ans)
